@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="bootstrap/favicon.ico">
+    <script src="bootstrap/dist/js/twitterjs.min.js"></script>
+    <script src="bootstrap/js/src/twitterjs.min.js"></script>
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/dist/css/starter-template.css" rel="stylesheet">
+
+<!--include pour la carte-->
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css' rel='stylesheet' />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+
+  </head>
+
+  <body>
+<div class="row bg-red flex ">
+    <div class="col-3  horizontal-middle" style="height: 10vh; display:flex">
+
+    	<!-- weather widget start --><a target="_blank" href="https://hotelmix.fr/weather/la-roche-sur-yon-19436"><img src="https://w.bookcdn.com/weather/picture/26_19436_1_3_e74c3c_250_c0392b_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=581&anc_id=65073"  alt="booked.net"/></a><!-- weather widget end -->
+
+    </div>
+    <div class="col-6 align-center  horizontal-middle h3">
+
+			<span class="align-center font-white"> Jeudi 30 Janvier   	</span>	
+    	
+
+    </div>
+    <div class="col-3 align-center horizontal-middle    h3">
+
+			<span class="align-center font-white"> 18 : 06   	</span>	
+    	
+
+    </div>
+</div>
+    <div class="row p-0">
+
+
+	    <div class="col-9 p-0">
+		<div id="map"></div>
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoibmFpcm9kIiwiYSI6ImNrNXpudTlibzAwMmMzdHM0MjNlY3JrOWIifQ.k4510mbXCOkvabg3laMElw';
+				var map = new mapboxgl.Map({
+				container: 'map', // container id
+				style: 'mapbox://styles/nairod/ck5znvcx82d7t1ilhdr9xzvke', // stylesheet location
+				center: [ -1.417,46.668], // starting position [lng, lat]
+				zoom: 13 // starting zoom
+				});
+		</script>
+
+	    </div>
+	    <div class="col-3 p-0  ">
+		    	<div class="row bg-red border-top horizontal-middle" style="height :20vh; ">
+		    		 <img class ="row bg-red img-menu horizontal-middle" src="img/bus.png" >
+
+		    	</div>
+		    	<div class="row bg-red border-top " style="height :20vh; ">
+		    		<img class ="row bg-red img-menu horizontal-middle" src="img/info.png" >
+		    	</div>
+		    	<div class="row bg-red border-top" style="height :20vh; ">
+		    		<img class ="row bg-red img-menu horizontal-middle" src="img/calendrier.png" >
+		    	</div>
+		    	<div class="row bg-red border-top" style="height :20vh; ">
+		    		<img class ="row bg-red img-menu horizontal-middle" src="img/case.png" >
+		    	</div>
+		    </div>    	
+   		</div>
+	</div>
+	<div id="tweet" class="row bg-red  border-top" style="height :5vh; width:100%">
+		<script >
+
+			getTwitters('tweet', { 
+			    id: 'rem', 
+			    count: 5, 
+			    enableLinks: false, 
+			    ignoreReplies: true, 
+			    clearContents: true,
+			    template: '"%text%" <a href="https://twitter.com/larochesuryonfr/status/1224289324436533249"</a>',
+			    user_profile_image_url: true
+			});
+		</script>
+	</div>
+
+
+    <div class= "row bg-white " style="height : 5vh; ">
+    	<div class="col-2 border-top">
+    					<img class ="icon" src="img/polytech_logo.jpg" >
+    	</div>
+     	<div class="col-2 border-top">
+     		    		<img class ="icon" src="img/jcDeceau_logo.jpeg" >
+    	</div>
+    	<div class="col-2 border-top">
+    		    		<img class ="icon" src="img/logo_lry.jpg" >
+    	</div>
+    	<div class="col-2 border-top">
+    		    		<img class ="icon" src="img/spie_logo.jpg" >
+    	</div>
+    	 <div class="col-4  border-top bg-red text-white" >
+    		   Decouvir l'histoire de l'abribus
+    	</div>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+
+  </body>
+</html>
