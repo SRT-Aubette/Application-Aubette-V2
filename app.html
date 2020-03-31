@@ -29,8 +29,7 @@
 	body { margin: 0; padding: 0; }
 	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
 </style>
-
-  </head>
+</head>
 
   <body>
 <div class="row bg-red flex ">
@@ -56,7 +55,12 @@
 
 
 	    <div class="col-9 p-0">
-		<div id="map"></div>
+		
+        <div id="bus" class="div-menu"> bus</div>
+        <div id="info" class="div-menu"> info</div>
+        <div id="horaire" class="div-menu"> horaire</div>
+        <div id="avis" class="div-menu"> avis</div>
+        <div id="map"></div> 
 		<script>
 			mapboxgl.accessToken = 'pk.eyJ1IjoibmFpcm9kIiwiYSI6ImNrNXpudTlibzAwMmMzdHM0MjNlY3JrOWIifQ.k4510mbXCOkvabg3laMElw';
 				var map = new mapboxgl.Map({
@@ -65,39 +69,32 @@
 				center: [ -1.417,46.668], // starting position [lng, lat]
 				zoom: 13 // starting zoom
 				});
-		</script>
 
+
+		</script>
 	    </div>
+
 	    <div class="col-3 p-0  ">
-		    	<div class="row bg-red border-top horizontal-middle" style="height :20vh; ">
+		    	<div id="btnBus"  class="row bg-red border-top horizontal-middle" style="height :20vh;  ">
 		    		 <img class ="row bg-red img-menu horizontal-middle" src="img/bus.png" >
 
 		    	</div>
-		    	<div class="row bg-red border-top " style="height :20vh; ">
+		    	<div id="btnInfo" class="row bg-red border-top " style="height :20vh; ">
 		    		<img class ="row bg-red img-menu horizontal-middle" src="img/info.png" >
 		    	</div>
-		    	<div class="row bg-red border-top" style="height :20vh; ">
+		    	<div id="btnHoraire" class="row bg-red border-top" style="height :20vh; ">
 		    		<img class ="row bg-red img-menu horizontal-middle" src="img/calendrier.png" >
 		    	</div>
-		    	<div class="row bg-red border-top" style="height :20vh; ">
+		    	<div id="btnAvis" class="row bg-red border-top" style="height :20vh; ">
 		    		<img class ="row bg-red img-menu horizontal-middle" src="img/case.png" >
 		    	</div>
 		    </div>    	
-   		</div>
-	</div>
-	<div id="tweet" class="row bg-red  border-top" style="height :5vh; width:100%">
-		<script >
+       		</div>
+    	</div>
 
-			getTwitters('tweet', { 
-			    id: 'rem', 
-			    count: 5, 
-			    enableLinks: false, 
-			    ignoreReplies: true, 
-			    clearContents: true,
-			    template: '"%text%" <a href="https://twitter.com/larochesuryonfr/status/1224289324436533249"</a>',
-			    user_profile_image_url: true
-			});
-		</script>
+    <script type="text/javascript" src="bootstrap/js/menu.js">  </script>
+
+	<div id="tweet" class="row bg-red  border-top" style="height :5vh; width:100%">
 	</div>
 
 

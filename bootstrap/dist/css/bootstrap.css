@@ -79,6 +79,10 @@
     margin-bottom: auto;
 
 }
+
+.div-menu{
+  display: none;
+}
 .font-white{
   color: white;
 }
